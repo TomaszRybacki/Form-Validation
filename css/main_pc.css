@@ -1,0 +1,166 @@
+   /* Kolory */
+    /*
+    zgniło-zielony:         hsl(73, 77%, 8%);
+    zielony:                hsl(122, 53%, 26%);
+    jasno-zielony:          hsl(88, 81%, 31%);
+
+    zgniło-żółty:           hsl(61, 69%, 38%);
+    żółty:                  hsl(58, 83%, 46%);
+
+    back:                   rgb(0, 0, 0);
+
+
+*/
+    body {
+        background: black;
+    }
+
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        font-family: "Oswald", sans-serif;
+        background-image: url(../images/chess.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    #back {
+        width: 400px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    h1 {
+        font-size: 32px;
+        margin: 20px 0 0 0;
+        color: hsl(58, 83%, 46%);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    fieldset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+        margin: 20px 0;
+        padding: 10px 0px;
+        border-bottom: solid 2px hsl(58, 83%, 46%);
+        border-radius: 20px;
+        box-sizing: border-box;
+
+    }
+    legend {
+        margin-bottom: 0;
+        font-size: 24px;
+        border-bottom: solid 2px hsl(58, 83%, 46%);
+        padding-bottom: 4px;
+        width: 100%;
+        color: hsl(88, 81%, 31%);
+    }
+
+    label {
+        width: 350px;
+        margin: 15px 20px;
+        font-size: 18px;
+        color: hsl(88, 81%, 31%);
+    }
+
+    .box {
+        float: right;
+        font-size: 18px;
+        border-radius: 5px;
+        width: 200px;
+        height: 20px;
+    }
+
+    .box:focus {
+        outline: none;
+        border: solid 2px hsl(58, 83%, 46%);
+
+    }
+
+    input[type=submit] {
+        float: right;
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+        background: hsl(61, 69%, 38%);
+        text-transform: uppercase;
+        color: black;
+    }
+
+    input {
+        background: black;
+        border: solid 2px hsl(73, 77%, 8%);
+        color: hsl(122, 53%, 26%);
+        font-family: "Oswald", sans-serif;
+        font-size: 18px;
+    }
+
+    /*  **** Tooltip **** */
+    .tooltip {
+        color: black;
+        background: hsl(58, 83%, 46%);
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        font-size: 18px;
+        float: right;
+        margin-top: 3px;
+        margin-left: 15px;
+        cursor: help;
+        position: relative;
+    }
+
+    .tooltip::before,
+    .tooltip::after {
+        position: absolute;
+        left: 50%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease 0.3s;
+    }
+
+    .tooltip::before {
+        content: "";
+        border-width: 10px 8px 0 8px;
+        border-style: solid;
+        border-color: hsl(58, 83%, 46%) transparent;
+        margin-left: -8px;
+        top: -10px;
+    }
+
+    .tooltip::after {
+        content: attr(data-tooltip);
+        background: hsl(58, 83%, 46%);
+        font-size: 14px;
+        top: -10px;
+        width: 240px;
+        margin-left: -230px;
+        padding: 6px;
+        border-radius: 6px;
+        color: black;
+        transform: translateY(-100%);
+    }
+
+    .tooltip:hover::before,
+    .tooltip:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+

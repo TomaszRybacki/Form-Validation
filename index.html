@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="author" content="Tomasz Rybacki">
+    <meta name="keywords" content="formularz">
+    <meta name="description" content="Sprawdzenie czy wprowadzone dane są poprawne.">
+
+    <title>Werfikacja formularza</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon96x96.png">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main_pc.css">
+
+</head>
+
+<body>
+    <div id="wrapper">
+
+        <div id="back">
+            <h1>Loża planszówkowych masonów</h1>
+
+            <form method="post" target="_self" accept-charset="utf-8" action="planszowki.php" novalidate>
+                <fieldset>
+                    <legend>Twoje dane</legend>
+                    <label>Pseudonim
+                    <span class="tooltip" data-tooltip="Powinien zawierać masoński symbol #">?</span>
+                    <input type=text class="box" id="pseudonym"></label>
+                    <label>Wiek
+                    <span class="tooltip" data-tooltip="Musisz mieć ponad 20 lat">?</span>
+                    <input type="number" class="box" id="age"></label>
+                    <label>Telefon
+                    <span class="tooltip" data-tooltip="Dozwolony format to xxx-xxx-xxx">?</span>
+                    <input type="tel" class="box" id="tel"></label>
+                    <label>E-mail
+                    <span class="tooltip" data-tooltip="Musi kończyć się na @gmail.com">?</span>
+                    <input type="email" class="box" id="email"></label>
+                    <label>hasło
+                    <span class="tooltip" data-tooltip="Powyżej 6 znaków, tylko cyfry i litery">?</span>
+                    <input type="password" class="box" id="password"></label>
+                    <label>powtórz hasło
+                    <span class="tooltip" data-tooltip="Nie pamiętasz ! Nie nadajesz się na masona.">?</span>
+                    <input type="password" class="box" id="repeat"></label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Twój poziom wtajemniczenia</legend>
+                    <label>Jak długo grasz w planszówki ?</label>
+                    <label>
+            <input type="radio" name="staz" value="< rok">&#60; rok
+            <input type="radio" name="staz" value="2 - 3 lata"> 2-3 lata
+            <input type="radio" name="staz" value="> 3 lat">&#62; 3 lat
+                </label>
+                    <label>W jakiego typu planszówki grasz ?</label>
+                    <label>
+            <input type="checkbox" name="rodzaj" value="Imprezowe">Imprezowe
+            <input type="checkbox" name="rodzaj" value="Ameritrash">Ameritrash
+            <input type="checkbox" name="rodzaj" value="Eurogry">Eurogry
+            <input type="checkbox" name="rodzaj" value="Wojenne">Wojenne
+            </label>
+                    <label><input type="submit" id="join" value="Zostań masonem"></label>
+                </fieldset>
+
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="scripts/code.js"></script>
+</body>
+
+</html>
